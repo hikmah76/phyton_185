@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="D:/PhytonDB_185/perbaikan.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="150"/><column_width id="3" width="3542"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,11:mainnilai_siswa"/><default_encoding codec=""/><browse_table_settings/></tab_browse><tab_sql><sql name="SQL 1">
+
+
+-- Create the table
+CREATE TABLE IF NOT EXISTS &quot;tabel_nilai_siswa&quot; (
+    &quot;id_siswa&quot; INTEGER PRIMARY KEY,
+    &quot;nama_siswa&quot; TEXT,
+    &quot;nilai_biologi&quot; INTEGER,
+    &quot;nilai_fisika&quot; INTEGER,
+    &quot;nilai_inggris&quot; INTEGER,
+    &quot;nilai_matematika&quot; INTEGER,
+    &quot;nilai_ekonomi&quot; INTEGER,
+    &quot;nilai_geografi&quot; INTEGER,
+    &quot;nilai_sosiologi&quot; INTEGER,
+    &quot;nilai_seni&quot; INTEGER,
+    &quot;nilai_bahasa_indonesia&quot; INTEGER,
+    &quot;nilai_bahasa_inggris&quot; INTEGER,
+    &quot;prediksi_fakultas&quot; TEXT
+);
+
+-- Insert data untuk mengisi tabel
+INSERT INTO &quot;tabel_nilai_siswa&quot; (
+    &quot;nama_siswa&quot;,
+    &quot;nilai_biologi&quot;,
+    &quot;nilai_fisika&quot;,
+    &quot;nilai_inggris&quot;,
+    &quot;nilai_matematika&quot;,
+    &quot;nilai_ekonomi&quot;,
+    &quot;nilai_geografi&quot;,
+    &quot;nilai_sosiologi&quot;,
+    &quot;nilai_seni&quot;,
+    &quot;nilai_bahasa_indonesia&quot;,
+    &quot;nilai_bahasa_inggris&quot;,
+    &quot;prediksi_fakultas&quot;
+) VALUES
+('Rosa', 89, 92, 90, 78, 91, 79, 88, 87, 89, 90, 'Teknik'),
+('Sadam', 92, 85, 88, 79, 90, 85, 90, 87, 91, 88, 'Kedokteran'),
+('Cila', 75, 80, 82, 90, 78, 92, 84, 89, 80, 85, 'Ekonomi');
+
+-- Select data untuk menampilkan 
+SELECT * FROM &quot;tabel_nilai_siswa&quot;
+WHERE &quot;nama_siswa&quot; IN ('Rosa', 'Sadam', 'Cila');
+
+
+</sql><current_tab id="0"/></tab_sql></sqlb_project>
